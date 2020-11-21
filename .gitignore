@@ -1,0 +1,7 @@
+.git
+.git/*
+.idea
+.idea/*
+*.iml
+bin
+bin/*
