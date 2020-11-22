@@ -19,11 +19,11 @@ public class PowerSortControllerTest {
     public void should_process_a_dataset() {
         PowerSort ps = controller.process(new int[]{1, 3, 2});
         Assert.notNull(ps, "Processed result must not be null");
-        Assert.notNull(ps.getSortedDataSet(), "Sorted dataset must not be null");
-        Assert.isTrue(ps.getSum() == 6, "The sum of the array must be 6");
-        Assert.isTrue(ps.getSortedDataSet()[0] == 1, "The first element of the sorted array must be 1");
-        Assert.isTrue(ps.getSortedDataSet()[1] == 2, "The second element of the sorted array must be 2");
-        Assert.isTrue(ps.getSortedDataSet()[2] == 3, "The third element of the sorted array must be 3");
+        Assert.notNull(ps.getDataSetSorted(), "Sorted dataset must not be null");
+        Assert.isTrue(ps.getDataSetSum() == 6, "The sum of the array must be 6");
+        Assert.isTrue(ps.getDataSetSorted()[0] == 1, "The first element of the sorted array must be 1");
+        Assert.isTrue(ps.getDataSetSorted()[1] == 2, "The second element of the sorted array must be 2");
+        Assert.isTrue(ps.getDataSetSorted()[2] == 3, "The third element of the sorted array must be 3");
 
     }
 

@@ -36,6 +36,9 @@ public class PowerSortService implements IPowerSortService {
      * The dataset needs to be traversed n times till no swap occur
      * The (average) complexity function of this algorithm is O(n^2) as it nests 2 loops
      *
+     * Assumption: cannot use Arrays.stream(dataSet).sorted().toArray() is it would use
+     * a 3rd party API to sort the array
+     *
      * @param dataSet
      * @return
      */

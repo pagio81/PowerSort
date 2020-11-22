@@ -2,19 +2,19 @@ package org.example.powersort.model;
 
 public class PowerSort {
 
-    private final int[] sortedDataSet;
-    private final long sum;
+    private final int[] dataSetSorted;
+    private final long dataSetSum;
 
     public PowerSort(int[] sortedDataSet, long sum) {
-        this.sortedDataSet = sortedDataSet;
-        this.sum = sum;
+        this.dataSetSorted = sortedDataSet;
+        this.dataSetSum = sum;
     }
 
-    public int[] getSortedDataSet() {
-        return sortedDataSet;
+    public int[] getDataSetSorted() {
+        return dataSetSorted;
     }
 
-    public long getSum() {
-        return sum;
+    public long getDataSetSum() {
+        return dataSetSum;
     }
 }

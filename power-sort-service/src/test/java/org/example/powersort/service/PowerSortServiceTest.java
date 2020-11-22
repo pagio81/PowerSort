@@ -19,13 +19,13 @@ public class PowerSortServiceTest {
         PowerSort ps = powerSortService.process(dataSet);
 
         Assert.notNull(ps, "Processed result must not be null");
-        Assert.notNull(ps.getSortedDataSet(), "Sorted dataset must not be null");
-        Assert.isTrue(ps.getSum() == 26, "The sum of the array must be 26");
-        Assert.isTrue(ps.getSortedDataSet()[0] == 0, "The first element of the sorted array must be 0");
-        Assert.isTrue(ps.getSortedDataSet()[1] == 5, "The second element of the sorted array must be 5");
-        Assert.isTrue(ps.getSortedDataSet()[2] == 6, "The third element of the sorted array must be 6");
-        Assert.isTrue(ps.getSortedDataSet()[3] == 7, "The fourth element of the sorted array must be 7");
-        Assert.isTrue(ps.getSortedDataSet()[4] == 8, "The fifth element of the sorted array must be 8");
+        Assert.notNull(ps.getDataSetSorted(), "Sorted dataset must not be null");
+        Assert.isTrue(ps.getDataSetSum() == 26, "The sum of the array must be 26");
+        Assert.isTrue(ps.getDataSetSorted()[0] == 0, "The first element of the sorted array must be 0");
+        Assert.isTrue(ps.getDataSetSorted()[1] == 5, "The second element of the sorted array must be 5");
+        Assert.isTrue(ps.getDataSetSorted()[2] == 6, "The third element of the sorted array must be 6");
+        Assert.isTrue(ps.getDataSetSorted()[3] == 7, "The fourth element of the sorted array must be 7");
+        Assert.isTrue(ps.getDataSetSorted()[4] == 8, "The fifth element of the sorted array must be 8");
     }
 
     @Test
@@ -35,13 +35,13 @@ public class PowerSortServiceTest {
         PowerSort ps = powerSortService.process(dataSet);
 
         Assert.notNull(ps, "Processed result must not be null");
-        Assert.notNull(ps.getSortedDataSet(), "Sorted dataset must not be null");
-        Assert.isTrue(ps.getSum() == 22, "The sum of the array must be 22");
-        Assert.isTrue(ps.getSortedDataSet()[0] == 1, "The first element of the sorted array must be 1");
-        Assert.isTrue(ps.getSortedDataSet()[1] == 2, "The second element of the sorted array must be 2");
-        Assert.isTrue(ps.getSortedDataSet()[2] == 4, "The third element of the sorted array must be 4");
-        Assert.isTrue(ps.getSortedDataSet()[3] == 5, "The fourth element of the sorted array must be 5");
-        Assert.isTrue(ps.getSortedDataSet()[4] == 10, "The fifth element of the sorted array must be 10");
+        Assert.notNull(ps.getDataSetSorted(), "Sorted dataset must not be null");
+        Assert.isTrue(ps.getDataSetSum() == 22, "The sum of the array must be 22");
+        Assert.isTrue(ps.getDataSetSorted()[0] == 1, "The first element of the sorted array must be 1");
+        Assert.isTrue(ps.getDataSetSorted()[1] == 2, "The second element of the sorted array must be 2");
+        Assert.isTrue(ps.getDataSetSorted()[2] == 4, "The third element of the sorted array must be 4");
+        Assert.isTrue(ps.getDataSetSorted()[3] == 5, "The fourth element of the sorted array must be 5");
+        Assert.isTrue(ps.getDataSetSorted()[4] == 10, "The fifth element of the sorted array must be 10");
     }
 
     @Test
@@ -52,13 +52,13 @@ public class PowerSortServiceTest {
         PowerSort ps = powerSortService.process(dataSet);
 
         Assert.notNull(ps, "Processed result must not be null");
-        Assert.notNull(ps.getSortedDataSet(), "Sorted dataset must not be null");
-        Assert.isTrue(ps.getSum() == 40, "The sum of the array must be 40");
-        Assert.isTrue(ps.getSortedDataSet()[0] == 6, "The first element of the sorted array must be 6");
-        Assert.isTrue(ps.getSortedDataSet()[1] == 7, "The second element of the sorted array must be 7");
-        Assert.isTrue(ps.getSortedDataSet()[2] == 8, "The third element of the sorted array must be 8");
-        Assert.isTrue(ps.getSortedDataSet()[3] == 9, "The fourth element of the sorted array must be 9");
-        Assert.isTrue(ps.getSortedDataSet()[4] == 10, "The fifth element of the sorted array must be 10");
+        Assert.notNull(ps.getDataSetSorted(), "Sorted dataset must not be null");
+        Assert.isTrue(ps.getDataSetSum() == 40, "The sum of the array must be 40");
+        Assert.isTrue(ps.getDataSetSorted()[0] == 6, "The first element of the sorted array must be 6");
+        Assert.isTrue(ps.getDataSetSorted()[1] == 7, "The second element of the sorted array must be 7");
+        Assert.isTrue(ps.getDataSetSorted()[2] == 8, "The third element of the sorted array must be 8");
+        Assert.isTrue(ps.getDataSetSorted()[3] == 9, "The fourth element of the sorted array must be 9");
+        Assert.isTrue(ps.getDataSetSorted()[4] == 10, "The fifth element of the sorted array must be 10");
     }
 
     @Test
@@ -68,9 +68,9 @@ public class PowerSortServiceTest {
         PowerSort ps = powerSortService.process(dataSet);
 
         Assert.notNull(ps, "Processed result must not be null");
-        Assert.notNull(ps.getSortedDataSet(), "Sorted dataset must not be null");
-        Assert.isTrue(ps.getSum() == 0, "The sum of the array must be 0");
-        Assert.isTrue(ps.getSortedDataSet().length == 0, "The sum of the array must be 0");
+        Assert.notNull(ps.getDataSetSorted(), "Sorted dataset must not be null");
+        Assert.isTrue(ps.getDataSetSum() == 0, "The sum of the array must be 0");
+        Assert.isTrue(ps.getDataSetSorted().length == 0, "The sum of the array must be 0");
     }
 
     @Test
@@ -86,14 +86,14 @@ public class PowerSortServiceTest {
         PowerSort ps = powerSortService.process(dataSet);
 
         Assert.notNull(ps, "Processed result must not be null");
-        Assert.notNull(ps.getSortedDataSet(), "Sorted dataset must not be null");
-        Assert.isTrue(ps.getSum() == 21, "The sum of the array must be 21");
-        Assert.isTrue(ps.getSortedDataSet()[0] == 0, "The first element of the sorted array must be 0");
-        Assert.isTrue(ps.getSortedDataSet()[1] == 2, "The second element of the sorted array must be 2");
-        Assert.isTrue(ps.getSortedDataSet()[2] == 3, "The third element of the sorted array must be 3");
-        Assert.isTrue(ps.getSortedDataSet()[3] == 5, "The fourth element of the sorted array must be 5");
-        Assert.isTrue(ps.getSortedDataSet()[4] == 5, "The fifth element of the sorted array must be 5");
-        Assert.isTrue(ps.getSortedDataSet()[5] == 6, "The sixth element of the sorted array must be 6");
+        Assert.notNull(ps.getDataSetSorted(), "Sorted dataset must not be null");
+        Assert.isTrue(ps.getDataSetSum() == 21, "The sum of the array must be 21");
+        Assert.isTrue(ps.getDataSetSorted()[0] == 0, "The first element of the sorted array must be 0");
+        Assert.isTrue(ps.getDataSetSorted()[1] == 2, "The second element of the sorted array must be 2");
+        Assert.isTrue(ps.getDataSetSorted()[2] == 3, "The third element of the sorted array must be 3");
+        Assert.isTrue(ps.getDataSetSorted()[3] == 5, "The fourth element of the sorted array must be 5");
+        Assert.isTrue(ps.getDataSetSorted()[4] == 5, "The fifth element of the sorted array must be 5");
+        Assert.isTrue(ps.getDataSetSorted()[5] == 6, "The sixth element of the sorted array must be 6");
     }
 
 }
