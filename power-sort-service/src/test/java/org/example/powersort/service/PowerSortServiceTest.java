@@ -29,7 +29,7 @@ public class PowerSortServiceTest {
     }
 
     @Test
-    public void sort_ordered_data_set() {
+    public void test_processing_of_ordered_data_set() {
         //scenario to test that an unordered dataset is sorted correctly and the sum is correct
         int[] dataSet = new int[]{1, 2, 4, 5, 10};
         PowerSort ps = powerSortService.process(dataSet);
@@ -45,7 +45,24 @@ public class PowerSortServiceTest {
     }
 
     @Test
-    public void sort_empty_data_set() {
+    public void test_processing_of_descending_ordered_data_set() {
+        //scenario to test that an descending dataset is sorted correctly and the sum is correct
+        //this tests the worst case scenario for the sorting algorithm
+        int[] dataSet = new int[]{10, 9, 8, 7, 6};
+        PowerSort ps = powerSortService.process(dataSet);
+
+        Assert.notNull(ps, "Processed result must not be null");
+        Assert.notNull(ps.getSortedDataSet(), "Sorted dataset must not be null");
+        Assert.isTrue(ps.getSum() == 40, "The sum of the array must be 40");
+        Assert.isTrue(ps.getSortedDataSet()[0] == 6, "The first element of the sorted array must be 6");
+        Assert.isTrue(ps.getSortedDataSet()[1] == 7, "The second element of the sorted array must be 7");
+        Assert.isTrue(ps.getSortedDataSet()[2] == 8, "The third element of the sorted array must be 8");
+        Assert.isTrue(ps.getSortedDataSet()[3] == 9, "The fourth element of the sorted array must be 9");
+        Assert.isTrue(ps.getSortedDataSet()[4] == 10, "The fifth element of the sorted array must be 10");
+    }
+
+    @Test
+    public void test_processing_an_empty_data_set() {
         //scenario to test that an unordered dataset is sorted correctly and the sum is correct
         int[] dataSet = new int[]{};
         PowerSort ps = powerSortService.process(dataSet);
@@ -57,13 +74,13 @@ public class PowerSortServiceTest {
     }
 
     @Test
-    public void sort_null_data_set() {
+    public void test_processing_a_null_data_set() {
         assertThrows(NullDataSetException.class, () -> powerSortService.process(null),
                 "Expected NullDataSetException when passing a null dataset");
     }
 
     @Test
-    public void sort_data_set_containing_duplicates() {
+    public void test_processing_a_data_set_containing_duplicates() {
         //scenario to test that dataset containing duplicates is sorted correctly and the sum is correct
         int[] dataSet = new int[]{0, 5, 6, 3, 2, 5};
         PowerSort ps = powerSortService.process(dataSet);
@@ -77,7 +94,6 @@ public class PowerSortServiceTest {
         Assert.isTrue(ps.getSortedDataSet()[3] == 5, "The fourth element of the sorted array must be 5");
         Assert.isTrue(ps.getSortedDataSet()[4] == 5, "The fifth element of the sorted array must be 5");
         Assert.isTrue(ps.getSortedDataSet()[5] == 6, "The sixth element of the sorted array must be 6");
-
     }
 
 }

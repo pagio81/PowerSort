@@ -28,7 +28,7 @@ public class PowerSortControllerTest {
     }
 
     @Test
-    public void sort_null_data_set() {
+    public void should_not_process_a_null_dataset() {
         assertThrows(ResponseStatusException.class, () -> controller.process(null),
                 "Expected ResponseStatusException when passing a null dataset");
     }
